@@ -1,10 +1,11 @@
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro; // Required for TextMeshPro
 
 public class ScoreManager : MonoBehaviour
 {
     public int score = 0; // The player's score
-    public Text scoreText; 
+    public TMP_Text scoreText; // Use TMP_Text instead of Text
 
     void Start()
     {
