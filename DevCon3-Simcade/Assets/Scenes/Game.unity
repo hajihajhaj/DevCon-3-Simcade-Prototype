@@ -131,6 +131,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 114726852}
+  - component: {fileID: 114726854}
+  - component: {fileID: 114726853}
   m_Layer: 0
   m_Name: GameObject (3)
   m_TagString: Untagged
@@ -153,6 +155,47 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &114726853
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 114726851}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &114726854
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 114726851}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42a1d0ad7a0946b4fbb0ba322f18b3bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ballRigidbody: {fileID: 460802395}
+  ballSpeed: 10
+  maxBallSpeed: 15
+  paddle: {fileID: 1328480926}
+  paddleSpeed: 10
+  paddleBoundary: 7
+  score: 0
+  maxScore: 10
 --- !u!1 &164288902
 GameObject:
   m_ObjectHideFlags: 0
@@ -267,6 +310,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 232467189}
+  - component: {fileID: 232467191}
+  - component: {fileID: 232467190}
   m_Layer: 0
   m_Name: GameObject
   m_TagString: Untagged
@@ -289,6 +334,47 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &232467190
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 232467188}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &232467191
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 232467188}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42a1d0ad7a0946b4fbb0ba322f18b3bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ballRigidbody: {fileID: 460802395}
+  ballSpeed: 10
+  maxBallSpeed: 15
+  paddle: {fileID: 1328480926}
+  paddleSpeed: 10
+  paddleBoundary: 7
+  score: 0
+  maxScore: 10
 --- !u!1 &281163830
 GameObject:
   m_ObjectHideFlags: 0
@@ -388,7 +474,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!114 &460802397
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -419,12 +505,32 @@ SphereCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
   m_Radius: 0.022744317
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &460802399
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 460802394}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42a1d0ad7a0946b4fbb0ba322f18b3bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ballRigidbody: {fileID: 460802395}
+  ballSpeed: 10
+  maxBallSpeed: 15
+  paddle: {fileID: 1328480926}
+  paddleSpeed: 10
+  paddleBoundary: 7
+  score: 0
+  maxScore: 10
 --- !u!1 &557200834 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5018138420239312923, guid: 69c9a19a8e7537e45a3fbac5959879d4, type: 3}
@@ -443,6 +549,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetType: Green
+--- !u!114 &557200836
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 557200834}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42a1d0ad7a0946b4fbb0ba322f18b3bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ballRigidbody: {fileID: 460802395}
+  ballSpeed: 10
+  maxBallSpeed: 15
+  paddle: {fileID: 1328480926}
+  paddleSpeed: 10
+  paddleBoundary: 7
+  score: 0
+  maxScore: 10
 --- !u!1 &694445731
 GameObject:
   m_ObjectHideFlags: 0
@@ -644,6 +770,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 884340290}
+  - component: {fileID: 884340292}
+  - component: {fileID: 884340291}
   m_Layer: 0
   m_Name: GameObject (2)
   m_TagString: Untagged
@@ -666,6 +794,47 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &884340291
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 884340289}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &884340292
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 884340289}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42a1d0ad7a0946b4fbb0ba322f18b3bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ballRigidbody: {fileID: 460802395}
+  ballSpeed: 10
+  maxBallSpeed: 15
+  paddle: {fileID: 1328480926}
+  paddleSpeed: 10
+  paddleBoundary: 7
+  score: 0
+  maxScore: 10
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -904,6 +1073,7 @@ GameObject:
   - component: {fileID: 1072599641}
   - component: {fileID: 1072599640}
   - component: {fileID: 1072599639}
+  - component: {fileID: 1072599643}
   m_Layer: 0
   m_Name: Bounds
   m_TagString: Bounds
@@ -998,6 +1168,26 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1072599643
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1072599638}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42a1d0ad7a0946b4fbb0ba322f18b3bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ballRigidbody: {fileID: 460802395}
+  ballSpeed: 10
+  maxBallSpeed: 15
+  paddle: {fileID: 1328480926}
+  paddleSpeed: 10
+  paddleBoundary: 7
+  score: 0
+  maxScore: 10
 --- !u!1 &1142097276
 GameObject:
   m_ObjectHideFlags: 0
@@ -1278,6 +1468,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetType: Other
+--- !u!114 &1539143141
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1539143139}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42a1d0ad7a0946b4fbb0ba322f18b3bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ballRigidbody: {fileID: 460802395}
+  ballSpeed: 10
+  maxBallSpeed: 15
+  paddle: {fileID: 1328480926}
+  paddleSpeed: 10
+  paddleBoundary: 7
+  score: 0
+  maxScore: 10
 --- !u!1 &1588657579 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8804198767411351704, guid: 4f551bc84891f2047b2f2aeaeed2ecf1, type: 3}
@@ -1296,6 +1506,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetType: Gold
+--- !u!114 &1588657581
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1588657579}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42a1d0ad7a0946b4fbb0ba322f18b3bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ballRigidbody: {fileID: 460802395}
+  ballSpeed: 10
+  maxBallSpeed: 15
+  paddle: {fileID: 1328480926}
+  paddleSpeed: 10
+  paddleBoundary: 7
+  score: 0
+  maxScore: 10
 --- !u!1 &1617827320
 GameObject:
   m_ObjectHideFlags: 0
@@ -1410,6 +1640,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1850864525}
+  - component: {fileID: 1850864527}
+  - component: {fileID: 1850864526}
   m_Layer: 0
   m_Name: GameObject (1)
   m_TagString: Untagged
@@ -1432,6 +1664,47 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1850864526
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1850864524}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1850864527
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1850864524}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42a1d0ad7a0946b4fbb0ba322f18b3bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ballRigidbody: {fileID: 460802395}
+  ballSpeed: 10
+  maxBallSpeed: 15
+  paddle: {fileID: 1328480926}
+  paddleSpeed: 10
+  paddleBoundary: 7
+  score: 0
+  maxScore: 10
 --- !u!1001 &2080843281
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1513,6 +1786,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7324382238914860773, guid: 5b9d4251829af024daf056abe0961647, type: 3}
       insertIndex: -1
       addedObject: {fileID: 460802397}
+    - targetCorrespondingSourceObject: {fileID: 7324382238914860773, guid: 5b9d4251829af024daf056abe0961647, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 460802399}
   m_SourcePrefab: {fileID: 100100000, guid: 5b9d4251829af024daf056abe0961647, type: 3}
 --- !u!1 &2140452667
 GameObject:
@@ -1675,6 +1951,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 5018138420239312923, guid: 69c9a19a8e7537e45a3fbac5959879d4, type: 3}
       insertIndex: -1
       addedObject: {fileID: 557200835}
+    - targetCorrespondingSourceObject: {fileID: 5018138420239312923, guid: 69c9a19a8e7537e45a3fbac5959879d4, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 557200836}
   m_SourcePrefab: {fileID: 100100000, guid: 69c9a19a8e7537e45a3fbac5959879d4, type: 3}
 --- !u!1001 &6591446673852415337
 PrefabInstance:
@@ -1735,6 +2014,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2040331359295253654, guid: 495d649c22310554999da8d966dcd9c3, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1539143140}
+    - targetCorrespondingSourceObject: {fileID: 2040331359295253654, guid: 495d649c22310554999da8d966dcd9c3, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1539143141}
   m_SourcePrefab: {fileID: 100100000, guid: 495d649c22310554999da8d966dcd9c3, type: 3}
 --- !u!1001 &8303128572047458570
 PrefabInstance:
@@ -1795,6 +2077,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8804198767411351704, guid: 4f551bc84891f2047b2f2aeaeed2ecf1, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1588657580}
+    - targetCorrespondingSourceObject: {fileID: 8804198767411351704, guid: 4f551bc84891f2047b2f2aeaeed2ecf1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1588657581}
   m_SourcePrefab: {fileID: 100100000, guid: 4f551bc84891f2047b2f2aeaeed2ecf1, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
