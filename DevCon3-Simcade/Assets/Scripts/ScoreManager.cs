@@ -1,32 +1,39 @@
 using UnityEngine;
-using UnityEngine.UI;
-using TMPro; // Required for TextMeshPro
+using UnityEngine.SceneManagement;
+using TMPro;
 
 public class ScoreManager : MonoBehaviour
 {
-    public int score = 0; // The player's score
-    public TMP_Text scoreText; // Use TMP_Text instead of Text
+    public float currentScore = 0f; // The player's current score
+    public float scoreIncreaseRate = 10f; // How fast the score increases (per second)
+
+    [SerializeField] TextMeshProUGUI scoreText; // The on-screen score display
 
     void Start()
     {
-        UpdateScoreText(); // Initialize the score display
+        // Initialize the score
+        currentScore = 0f;
     }
 
-    public void AddScore(int points)
+    void Update()
     {
-        score += points; // Increase the score
-        UpdateScoreText(); // Refresh the score display
-    }
+        // Increase the score over time
+        currentScore += scoreIncreaseRate * Time.deltaTime;
 
-    void UpdateScoreText()
-    {
+        // Update the score on the screen
         if (scoreText != null)
         {
-            scoreText.text = "Score: " + score.ToString();
+            scoreText.text = "Score: " + currentScore.ToString("0"); // Display as a whole number
         }
-        else
-        {
-            Debug.LogWarning("Score Text UI element is not assigned!");
-        }
+    }
+
+    public void SaveScoreAndEndGame()
+    {
+        // Save the score to PlayerPrefs
+        PlayerPrefs.SetFloat("FinalScore", currentScore);
+        PlayerPrefs.Save(); // Ensure the score is saved immediately
+
+        // Load the end screen
+        SceneManager.LoadScene("EndScreen");
     }
 }

@@ -63,6 +63,10 @@ public class GameManager : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Paddle"))
         {
+            // Increment score for each paddle hit
+            score++;
+            Debug.Log("Score: " + score);
+
             // Reflect the ball when it hits the paddle
             Vector3 reflection = Vector3.Reflect(ballRigidbody.velocity.normalized, collision.contacts[0].normal);
 
@@ -73,9 +77,9 @@ public class GameManager : MonoBehaviour
         }
         else if (collision.gameObject.CompareTag("Bounds"))
         {
-            // Reset ball when it goes out of bounds
-            Debug.Log("Ball out of bounds!");
-            LaunchBall();
+            // Game over logic
+            Debug.Log("Game Over! Final Score: " + score);
+            SceneManager.LoadScene("EndScreen");
         }
         else if (collision.gameObject.CompareTag("Target"))
         {

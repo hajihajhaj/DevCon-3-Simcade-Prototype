@@ -41,13 +41,14 @@ public class BallMovement : MonoBehaviour
         transform.position = new Vector3(paddle.position.x, paddle.position.y, -1.112f); // Set to starting position z = -1.112
     }
 
-    void LaunchBall()
-    {
-        // Launch the ball from paddle toward the wall
-        Vector3 launchDirection = (new Vector3(0, 0.1f, -0.3129f) - transform.position).normalized; // Slightly upward and forward
-        rb.velocity = launchDirection * speed; // Apply velocity
-        Debug.Log("Ball launched with velocity: " + rb.velocity);
-    }
+   void LaunchBall()
+{
+    // Calculate a realistic launch direction
+    Vector3 launchDirection = new Vector3(0, 1, 1).normalized; // Up and forward
+    rb.velocity = launchDirection * speed; // Apply velocity
+    Debug.Log("Ball launched with velocity: " + rb.velocity);
+}
+
 
 
 
