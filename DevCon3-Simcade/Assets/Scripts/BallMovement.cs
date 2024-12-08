@@ -4,6 +4,7 @@ using UnityEngine.SceneManagement;
 public class BallMovement : MonoBehaviour
 {
     public float speed = 10f; // Ball speed
+    public float paddleBounceMultiplier = 1.5f; // Multiplier for ball velocity after hitting the paddle
     public Transform paddle; // Reference to the paddle
     public ScoreManager scoreManager; // Reference to the ScoreManager
     private Rigidbody rb; // Reference to the Rigidbody component
@@ -41,17 +42,13 @@ public class BallMovement : MonoBehaviour
         transform.position = new Vector3(paddle.position.x, paddle.position.y, -1.112f); // Set to starting position z = -1.112
     }
 
-   void LaunchBall()
-{
-    // Calculate a realistic launch direction
-    Vector3 launchDirection = new Vector3(0, 1, 1).normalized; // Up and forward
-    rb.velocity = launchDirection * speed; // Apply velocity
-    Debug.Log("Ball launched with velocity: " + rb.velocity);
-}
-
-
-
-
+    void LaunchBall()
+    {
+        // Calculate a realistic launch direction
+        Vector3 launchDirection = new Vector3(0, 1, 1).normalized; // Up and forward
+        rb.velocity = launchDirection * speed; // Apply velocity
+        Debug.Log("Ball launched with velocity: " + rb.velocity);
+    }
 
     private void OnCollisionEnter(Collision collision)
     {
@@ -65,8 +62,26 @@ public class BallMovement : MonoBehaviour
             Debug.Log("Game Over!");
             HandleBoundsCollision();
         }
+
+        if (collision.gameObject.CompareTag("Paddle"))
+        {
+            HandlePaddleCollision(collision);
+        }
     }
 
+    void HandlePaddleCollision(Collision collision)
+    {
+        // Get the contact point of the collision
+        ContactPoint contact = collision.GetContact(0);
+
+        // Calculate the new velocity based on the direction of the collision
+        Vector3 newDirection = (transform.position - contact.point).normalized;
+
+        // Apply the new velocity with increased intensity
+        rb.velocity = newDirection * speed * paddleBounceMultiplier;
+
+        Debug.Log("Ball bounced off the paddle with velocity: " + rb.velocity);
+    }
 
     void HandleBoundsCollision()
     {
@@ -93,9 +108,9 @@ public class BallMovement : MonoBehaviour
     void FixedUpdate()
     {
         // Limit the ball's velocity to prevent it from going too fast
-        if (rb.velocity.magnitude > speed)
+        if (rb.velocity.magnitude > speed * paddleBounceMultiplier)
         {
-            rb.velocity = rb.velocity.normalized * speed;
+            rb.velocity = rb.velocity.normalized * speed * paddleBounceMultiplier;
         }
     }
 
@@ -108,5 +123,4 @@ public class BallMovement : MonoBehaviour
             LaunchBall();
         }
     }
-
 }
