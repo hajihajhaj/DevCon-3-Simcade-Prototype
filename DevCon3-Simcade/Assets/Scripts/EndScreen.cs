@@ -12,5 +12,7 @@ public class EndScreenManager : MonoBehaviour
 
         // Display the score
         finalScoreText.text = "Final Score: " + finalScore.ToString("0");
+
+        Cursor.visible = true;
     }
 }
