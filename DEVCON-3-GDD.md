@@ -89,7 +89,20 @@ Accurate metrics are important because they make the game feel natural and reali
 - What actions will players perform repeatedly to progress and engage with the game?
 
 ## Player Experience Goals
-- What specific feelings or emotional responses should players have during gameplay?
+- **What specific feelings or emotional responses should players have during gameplay?**
+  
+- **Excitement and Adrenaline:**
+- Players should feel a rush of energy during intense rallies, mimicking the high stakes and quick reflexes required in real table tennis.
+- **Competitiveness:**
+- Whether playing against AI or another player, the game should foster a sense of competition, driving players to improve their skills and outplay their opponent.
+- **Satisfaction and Achievement:**
+- Successfully returning a difficult shot, winning a close match, or mastering the mechanics should evoke feelings of accomplishment and pride.
+- **Immersion and Focus:**
+- Players should feel "in the zone," fully engaged in the gameplay, with an intuitive connection to the paddle and ball dynamics.
+- **Curiosity and Motivation to Improve:**
+- The game should encourage players to experiment with techniques, learn the nuances of spin and positioning, and strive to master the mechanics over time.
+- **Fun and Enjoyment:**
+- Above all, the game should be enjoyable and provide moments of laughter, camaraderie, or even light-hearted trash talk during multiplayer matches.
 
 ## Simcade Balance
 - How does the game balance realistic physics with arcade-style fun to appeal to a wide audience? (mention what the target power ups do)
