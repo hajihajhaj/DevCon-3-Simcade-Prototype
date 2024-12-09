@@ -88,6 +88,8 @@ Accurate metrics are important because they make the game feel natural and reali
 ## Core Gameplay Loop
 - What actions will players perform repeatedly to progress and engage with the game?
 
+---
+
 ## Player Experience Goals
 - **What specific feelings or emotional responses should players have during gameplay?**
   
@@ -104,8 +106,14 @@ Accurate metrics are important because they make the game feel natural and reali
 - **Fun and Enjoyment:**
 - Above all, the game should be enjoyable and provide moments of laughter, camaraderie, or even light-hearted trash talk during multiplayer matches.
 
+---
+
 ## Simcade Balance
-- How does the game balance realistic physics with arcade-style fun to appeal to a wide audience? (mention what the target power ups do)
+- **How does the game balance realistic physics with arcade-style fun to appeal to a wide audience?**
+
+To balance realistic physics with arcade-style fun, we kept everything accurate to real life, like the size, weight, bounciness, and friction of the ball, paddle, and table. When the player hits the ball, it reacts with extra force, just like it would in real life. We also added bounce sound effects to make the experience more immersive, and the art, including the table and scoreboard, was designed to look like the real thing.
+
+To add some fun and variety, we included targets that give players temporary power-ups. The gold target gives a 2x score multiplier, rewarding accuracy, while the green target slows down time so players can aim more carefully. By combining realism with arcade-style features, the game appeals to both competitive and casual players.
 
 ---
 
