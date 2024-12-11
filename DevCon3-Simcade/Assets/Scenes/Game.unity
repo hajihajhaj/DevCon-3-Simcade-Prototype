@@ -610,7 +610,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
-  paddleBounceMultiplier: 1.2
+  paddleBounceMultiplier: 1
   paddle: {fileID: 1328480926}
   scoreManager: {fileID: 751864838}
 --- !u!135 &460802398

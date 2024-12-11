@@ -63,7 +63,7 @@ public class BallMovement : MonoBehaviour
             HandleBoundsCollision();
         }
 
-        if (collision.gameObject.CompareTag("Paddle"))
+        if (collision.gameObject.CompareTag("Racket"))
         {
             HandlePaddleCollision(collision);
         }

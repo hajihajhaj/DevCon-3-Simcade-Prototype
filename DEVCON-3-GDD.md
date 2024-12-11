@@ -86,7 +86,7 @@ Accurate metrics are important because they make the game feel natural and reali
 ---
 
 ## Core Gameplay Loop
-- What actions will players perform repeatedly to progress and engage with the game?
+- **What actions will players perform repeatedly to progress and engage with the game?**
 
 In the game players will repeatedly perform positioning and movement, players will move the paddle around the table to position the paddle for returns. Fluid movement is essential to react to the ball’s speed and path. Having fast and alert movements with the paddle will help keep the player engaged on timing and placement, as the game progresses the player is challenged with targets for power ups. Returning the ball is one of the main actions performed, players will need to hit the ball over the net onto the table which requires correct timing and positioning. Successful returns can require a quick reaction based on the balls return to your side.
 
@@ -208,6 +208,11 @@ To add some fun and variety, we included targets that give players temporary pow
 1. Continue adjusting ball physics for realistic ping pong behavior.
 2. Refine paddle mechanics to allow dynamic movement.
 3. Improve the end screen.
+
+---
+
+# Designer Commentary Video
+https://vimeo.com/1038056174?share=copy
 
 ---
 
